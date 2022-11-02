@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,10 @@ import { VendorListComponent } from './models/vendor/vendor-list/vendor-list.com
 import { VendorDetailComponent } from './models/vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './models/vendor/vendor-create/vendor-create.component';
 import { VendorChangeComponent } from './models/vendor/vendor-change/vendor-change.component';
+import { HomeComponent } from './models/misc/home/home.component';
+import { AboutComponent } from './models/misc/about/about.component';
+import { E404Component } from './models/misc/e404/e404.component';
+import { MenuComponent } from './models/misc/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +54,15 @@ import { VendorChangeComponent } from './models/vendor/vendor-change/vendor-chan
     VendorListComponent,
     VendorDetailComponent,
     VendorCreateComponent,
-    VendorChangeComponent
+    VendorChangeComponent,
+    HomeComponent,
+    AboutComponent,
+    E404Component,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
