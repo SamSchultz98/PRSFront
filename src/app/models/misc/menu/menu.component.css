@@ -1,0 +1,28 @@
+a{
+    color: rgba(255, 255, 255, 0.429);
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    padding-bottom: 12%;
+    padding-top: 12%;
+}
+li{
+    display: inline-block;
+    
+}
+ul{
+    padding-left: 0px;
+    color:rgb(66, 66, 66) ;
+    background-color:rgb(66, 66, 66) ;
+}
+nav{
+    background-color: rgb(66, 66, 66);
+}
+
+a:hover{
+    color: white;
+    background-color: black;
+}
