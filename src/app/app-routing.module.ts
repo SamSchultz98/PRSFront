@@ -41,6 +41,7 @@ const routes: Routes = [
   {path:"user/change",component:UserChangeComponent},
   {path:"user/create",component:UserCreateComponent},
   {path:"user/detail",component:UserDetailComponent},
+  {path:"login", component:UserLoginComponent},
 
 
   {path:"vendor",component:VendorListComponent},
