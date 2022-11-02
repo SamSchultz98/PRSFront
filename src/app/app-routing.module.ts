@@ -25,6 +25,7 @@ import { VendorChangeComponent } from './models/vendor/vendor-change/vendor-chan
 import { HomeComponent } from './models/misc/home/home.component';
 import { AboutComponent } from './models/misc/about/about.component';
 import { E404Component } from './models/misc/e404/e404.component';
+import { RequestReviewComponent } from './models/request/request-review/request-review.component';
 import { MenuComponent } from './models/misc/menu/menu.component';
 
 const routes: Routes = [
@@ -54,6 +55,7 @@ const routes: Routes = [
   {path:"request/change",component:RequestChangeComponent},
   {path:"request/create",component:RequestCreateComponent},
   {path:"request/detail",component:RequestDetailComponent},
+  {path:"review",component:RequestReviewComponent},
 
 
   {path:"requestline",component:RequestlineListComponent},

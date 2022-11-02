@@ -30,6 +30,7 @@ import { HomeComponent } from './models/misc/home/home.component';
 import { AboutComponent } from './models/misc/about/about.component';
 import { E404Component } from './models/misc/e404/e404.component';
 import { MenuComponent } from './models/misc/menu/menu.component';
+import { RequestReviewComponent } from './models/request/request-review/request-review.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { MenuComponent } from './models/misc/menu/menu.component';
     HomeComponent,
     AboutComponent,
     E404Component,
-    MenuComponent
+    MenuComponent,
+    RequestReviewComponent
   ],
   imports: [
     BrowserModule,
