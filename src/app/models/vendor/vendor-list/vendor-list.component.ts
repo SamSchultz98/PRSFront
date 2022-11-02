@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vendor } from '../vendor.class';
+import { VendorService } from '../vendor.service';
 
 @Component({
   selector: 'app-vendor-list',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendorListComponent implements OnInit {
 
-  constructor() { }
+  pageTitle:string="Employee List"
+  vends: Vendor[] = [];
+
+
+  constructor(
+    private vendsvc: VendorService
+  ) { }
 
   ngOnInit(): void {
   }

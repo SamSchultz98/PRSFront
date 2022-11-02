@@ -1,2 +1,29 @@
-<app-menu></app-menu>
-<p>vendor-list works!</p>
+<div id="Component">
+<app-menu></app-menu>   <!-- Replace with App-head eventually-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of vends">
+            <td>{{v.id}}</td>
+            <td>{{v.name}}</td>
+            <td>{{v.address}}</td>
+            <td>{{v.city}}</td>
+            <td>{{v.state}}</td>
+            <td>{{v.zip}}</td>
+            <td>{{v.phone}}</td>
+            <td>{{v.email}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
