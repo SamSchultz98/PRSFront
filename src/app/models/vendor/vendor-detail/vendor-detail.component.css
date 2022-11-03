@@ -1,0 +1,36 @@
+table{
+    border-spacing: 0px;
+    border-width: 0px;
+    column-width: 0px;
+    border-collapse: collapse;
+    border: 0px;
+}
+tr{
+    column-width: 0px;
+    width: 0px;
+
+}
+td{
+  text-indent: 10px; 
+  border: 0px; 
+  width: 0px;
+  border-radius: 10px;
+text-align: center;
+  
+}
+input{
+    border-radius: 20px;
+    text-align: center;
+}
+.id{
+    width: 40px;
+}
+
+.prop{
+    font-weight:bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    border: 12px;
+    border-color: black;
+   
+}

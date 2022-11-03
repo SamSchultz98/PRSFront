@@ -26,3 +26,8 @@ a:hover{
     color: white;
     background-color: black;
 }
+
+.class1{
+    background-color: rgb(34, 95, 47);
+    color: azure;
+}

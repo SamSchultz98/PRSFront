@@ -1,1 +1,10 @@
-<p>vendor-detail works!</p>
+<app-header [pageTitle]="titlePage"></app-header>
+<table id="componenet" *ngIf="vend" class="table table-striped" style="border-spacing: 0px;">
+    <span><tr>
+    <td class="prop">ID</td>:
+    <td><input class="id" [(ngModel)]="vend.id" type="number" style="padding-left: 13px;" disabled></td>
+   </tr>
+    </span>
+   
+
+</table>
