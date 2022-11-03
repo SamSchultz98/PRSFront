@@ -25,12 +25,15 @@ input{
 .id{
     width: 40px;
 }
-
+.state{
+    width:60px;
+    padding-right: 15px;
+}
 .prop{
     font-weight:bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
     border: 12px;
     border-color: black;
-   
+    width: 100px;
 }
