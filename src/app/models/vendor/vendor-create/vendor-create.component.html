@@ -1,1 +1,53 @@
-<p>vendor-create works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+<div>
+
+    <table id="componenet" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id"[(ngModel)]="vend.id" type="number" disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Name</td>
+    <td><input [(ngModel)]="vend.name" placeholder="Name"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Address</td>
+    <td><input [(ngModel)]="vend.address" placeholder="Address"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">City</td>
+    <td><input [(ngModel)]="vend.city" placeholder="City" style="text-transform: capitalize;" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">State</td>
+        <td><input class="state"[(ngModel)]="vend.state" placeholder="ST"></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Zip</td>
+        <td><input class="zip" [(ngModel)]="vend.zip"  placeholder="Zip" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone"[(ngModel)]="vend.phone" placeholder="Phone"></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">Email</td>
+    <td><input class="email" [(ngModel)]="vend.email" placeholder="Email"></td>
+</tr>
+    
+</tbody>
+
+
+</table>
+<button class="btn btn-success" style="margin-left: 10px;" (click)="save()">Save</button>
+
+</div>

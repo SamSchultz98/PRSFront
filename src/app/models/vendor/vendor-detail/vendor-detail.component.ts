@@ -24,7 +24,7 @@ export class VendorDetailComponent implements OnInit {
   }
 
 
-
+  
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
