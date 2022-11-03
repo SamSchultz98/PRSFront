@@ -1,16 +1,18 @@
 th{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
 }
 .create{
     margin-left:20px;
     margin-top: 10px; 
     border-radius: 15px; 
-    margin-left: 77.8%; 
+    margin-left: 79.6%; 
     position: fixed;
 }
 
 td{
     text-align: center;
-    font-family: cursive;
+    font-family:Verdana, sans-serif;
+    font-size: larger;
 }
