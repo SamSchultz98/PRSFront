@@ -32,36 +32,36 @@ const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"about",component:AboutComponent},
-  {path:"product",component:ProductListComponent},
-  {path:"product/change",component:ProductChangeComponent},
-  {path:"product/create",component:ProductCreateComponent},
-  {path:"product/detail",component:ProductDetailComponent},
+  {path:"Products",component:ProductListComponent},
+  {path:"Products/change/:id",component:ProductChangeComponent},
+  {path:"Products/create",component:ProductCreateComponent},
+  {path:"Products/detail/:id",component:ProductDetailComponent},
 
 
-  {path:"user",component:UserListComponent},
-  {path:"user/change",component:UserChangeComponent},
-  {path:"user/create",component:UserCreateComponent},
-  {path:"user/detail",component:UserDetailComponent},
+  {path:"Users",component:UserListComponent},
+  {path:"Users/change/:id",component:UserChangeComponent},
+  {path:"Users/create",component:UserCreateComponent},
+  {path:"Users/detail/:id",component:UserDetailComponent},
   {path:"login", component:UserLoginComponent},
 
 
-  {path:"vendor",component:VendorListComponent},
-  {path:"vendor/change",component:VendorChangeComponent},
-  {path:"vendor/create",component:VendorCreateComponent},
-  {path:"vendor/detail",component:VendorDetailComponent},
+  {path:"Vendors",component:VendorListComponent},
+  {path:"Vendors/change/:id",component:VendorChangeComponent},
+  {path:"Vendors/create",component:VendorCreateComponent},
+  {path:"Vendors/detail/:id",component:VendorDetailComponent},
 
 
-  {path:"request",component:RequestListComponent},
-  {path:"request/change",component:RequestChangeComponent},
-  {path:"request/create",component:RequestCreateComponent},
-  {path:"request/detail",component:RequestDetailComponent},
+  {path:"Requests",component:RequestListComponent},
+  {path:"Requests/change/:id",component:RequestChangeComponent},
+  {path:"Requests/create",component:RequestCreateComponent},
+  {path:"Requests/detail/:id",component:RequestDetailComponent},
   {path:"review",component:RequestReviewComponent},
 
 
-  {path:"requestline",component:RequestlineListComponent},
-  {path:"requestline/change",component:RequestlineChangeComponent},
-  {path:"requestline/create",component:RequestlineCreateComponent},
-  {path:"requestline/detail",component:RequestlineDetailComponent},
+  {path:"Requestlines",component:RequestlineListComponent},
+  {path:"Requestlines/change/:id",component:RequestlineChangeComponent},
+  {path:"Requestlines/create",component:RequestlineCreateComponent},
+  {path:"Requestlines/detail/:id",component:RequestlineDetailComponent},
   
 
 
