@@ -1,0 +1,16 @@
+th{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.create{
+    margin-left:20px;
+    margin-top: 10px; 
+    border-radius: 15px; 
+    margin-left: 77.8%; 
+    position: fixed;
+}
+
+td{
+    text-align: center;
+    font-family: cursive;
+}
