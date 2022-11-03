@@ -10,6 +10,7 @@ import { VendorService } from '../vendor.service';
 })
 export class VendorDetailComponent implements OnInit {
 
+  showVerifyButton:boolean = false;
   titlePage="Vendor Detail"
   vend!:Vendor;
   constructor(
@@ -17,6 +18,13 @@ export class VendorDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { }
+
+  warning():void{
+    this.showVerifyButton = !this.showVerifyButton
+  }
+
+
+
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
@@ -30,5 +38,4 @@ export class VendorDetailComponent implements OnInit {
       }
     })
   }
-
 }

@@ -1,45 +1,58 @@
 <app-header [pageTitle]="titlePage"></app-header>
-<table id="componenet" *ngIf="vend" class="table table-striped" style="border-spacing: 0px;">
-    <span><tr>
-    <td class="prop">ID</td>:
-    <td><input class="id" [(ngModel)]="vend.id" type="number" style="padding-left: 13px;" disabled></td>
+<div>
+
+    <table id="componenet" *ngIf="vend" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id" [(ngModel)]="vend.id" type="number"  disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Name</td>
+    <td><input [(ngModel)]="vend.name"disabled></td>
    </tr>
-    </span>
-    <p><tr>
-    <td class="prop">Name</td>:
-    <td><input [(ngModel)]="vend.name" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">Address</td>:
-    <td><input [(ngModel)]="vend.address" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">City</td>:
-    <td><input [(ngModel)]="vend.city" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">State</td>:
-    <td><input class="state"[(ngModel)]="vend.state" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">Zip</td>:
-    <td><input [(ngModel)]="vend.zip" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">Phone</td>:
-    <td><input [(ngModel)]="vend.phone" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
-    <p><tr>
-    <td class="prop">Email</td>:
-    <td><input class="email" [(ngModel)]="vend.email" style="padding-left: 13px;" disabled></td>
-   </tr>
-    </p>
    
+    <tr>
+    <td class="prop">Address</td>
+    <td><input [(ngModel)]="vend.address" disabled></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">City</td>
+    <td><input [(ngModel)]="vend.city" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">State</td>
+        <td><input class="state"[(ngModel)]="vend.state" disabled></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Zip</td>
+        <td><input class="zip" [(ngModel)]="vend.zip" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone"[(ngModel)]="vend.phone" disabled></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">Email</td>
+    <td><input class="email" [(ngModel)]="vend.email" disabled></td>
+</tr>
+    
+</tbody>
+
 
 </table>
+<button class="btn btn-secondary" (click)="warning()" style="margin-left: 10px;">Delete</button>
+<span *ngIf="showVerifyButton">
+    &nbsp;
+    <span class="prop" style="margin-top: 0px;">Please click confirm to Delete &nbsp;</span>
+    <button onclick="deleteConfirm()" class="btn btn-danger">Confirm</button>
+    <p class="danger">This action can not be reversed</p>
+</span>
+</div>
