@@ -31,6 +31,8 @@ import { AboutComponent } from './models/misc/about/about.component';
 import { E404Component } from './models/misc/e404/e404.component';
 import { MenuComponent } from './models/misc/menu/menu.component';
 import { RequestReviewComponent } from './models/request/request-review/request-review.component';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { RequestReviewComponent } from './models/request/request-review/request-
     AboutComponent,
     E404Component,
     MenuComponent,
-    RequestReviewComponent
+    RequestReviewComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

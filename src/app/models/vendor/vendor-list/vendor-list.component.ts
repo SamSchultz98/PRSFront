@@ -9,7 +9,7 @@ import { VendorService } from '../vendor.service';
 })
 export class VendorListComponent implements OnInit {
 
-  pageTitle:string="Employee List"
+  pageTitle:string="Vendor List"
   vends: Vendor[] = [];
 
 
