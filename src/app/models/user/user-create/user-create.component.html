@@ -1,1 +1,53 @@
-<p>user-create works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+<div>
+
+    <table id="componenet" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id"[(ngModel)]="user.id" type="number" disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Username</td>
+    <td><input [(ngModel)]="user.username" placeholder="Username"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Firstname</td>
+    <td><input [(ngModel)]="user.firstname" placeholder="Address"style="text-transform: capitalize;"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Lastname</td>
+    <td><input [(ngModel)]="user.lastname" placeholder="City" style="text-transform: capitalize;" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone" [(ngModel)]="user.phone" placeholder="Phone"></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Email</td>
+        <td><input class="email" [(ngModel)]="user.email"  placeholder="Email" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">IsReviewer</td>
+        <td><input [(ngModel)]="user.isreviewer" type="checkbox"></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">IsAdmin</td>
+    <td><input [(ngModel)]="user.isadmin" type="checkbox"></td>
+</tr>
+    
+</tbody>
+
+
+</table>
+<button class="btn btn-success" style="margin-left: 10px;" (click)="save()">Save</button>
+
+</div>

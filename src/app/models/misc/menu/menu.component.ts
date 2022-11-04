@@ -29,10 +29,11 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.syssvc.verifyUser();
-    if(this.syssvc.user == null){
+  /*  if(this.syssvc.user == null){
       this.usernameDisplay="No User"
     }
     this.usernameDisplay=this.syssvc.user.username
+    */
   }
-
+  
 }
