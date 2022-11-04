@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from 'src/app/common/system.service';
 import { Vendor } from '../vendor.class';
 import { VendorService } from '../vendor.service';
 
@@ -14,10 +15,12 @@ export class VendorListComponent implements OnInit {
 
 
   constructor(
-    private vendsvc: VendorService
+    private vendsvc: VendorService,
+    private syssvc: SystemService
   ) { }
 
   ngOnInit(): void {
+    this.syssvc.verifyUser();
     this.vendsvc.list().subscribe({
       next: (res) => {
         console.log("Employee:",res)

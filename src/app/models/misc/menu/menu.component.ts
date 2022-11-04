@@ -11,6 +11,7 @@ import { Menu } from './menu.class';
 export class MenuComponent implements OnInit {
 
   user:User = this.syssvc.user;
+  usernameDisplay:String= this.user.username;
   
   menus: Menu[] = [
     new Menu("Home","/home"),
