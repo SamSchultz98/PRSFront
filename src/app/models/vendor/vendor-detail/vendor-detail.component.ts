@@ -23,7 +23,17 @@ export class VendorDetailComponent implements OnInit {
     this.showVerifyButton = !this.showVerifyButton
   }
 
-
+  deleteConfirm():void{
+    this.vendsvc.remove(this.vend.id).subscribe({
+      next:(res)=>{
+        console.debug("Vendor Deleted")
+        this.router.navigateByUrl("/Vendors")
+      },
+      error:(err) =>{
+        console.error(err)
+      }
+    })
+  }
   
 
   ngOnInit(): void {

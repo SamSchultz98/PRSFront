@@ -48,11 +48,11 @@
 
 
 </table>
-<button class="btn btn-secondary" (click)="warning()" ngClass="btn-clicked" style="margin-left: 10px;">Delete</button>
+<button class="btn btn-secondary" (click)="warning()" ngClass="btn-clicked" style="margin-left: 7.3%;">Delete</button>
 <span *ngIf="showVerifyButton">
     &nbsp;
     <span class="prop" style="margin-top: 0px;">Please click confirm to Delete &nbsp;</span>
-    <button onclick="deleteConfirm()" class="btn btn-danger">Confirm</button>
+    <button (click)="deleteConfirm()" class="btn btn-danger">Confirm</button>
     <p class="danger">This action can not be reversed</p>
 </span>
 </div>
