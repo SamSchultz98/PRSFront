@@ -27,7 +27,7 @@ export class VendorService {
     return this.http.post(`${this.baseurl}`, vend) as Observable<Vendor>
   }
   change(vend:Vendor): Observable<Vendor>{
-    return this.http.post(`${this.baseurl}/${vend.id}`, vend) as Observable<Vendor>
+    return this.http.put(`${this.baseurl}/${vend.id}`, vend) as Observable<Vendor>
   }
   remove(id:number): Observable<any>{
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>

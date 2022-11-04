@@ -1,1 +1,54 @@
-<p>vendor-change works!</p>
+<app-header [pageTitle]="titlePage"></app-header>
+<div>
+
+    <table id="componenet" *ngIf="vend" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id" [(ngModel)]="vend.id" type="number"  disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Name</td>
+    <td><input [(ngModel)]="vend.name" style="text-transform: capitalize;"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Address</td>
+    <td><input [(ngModel)]="vend.address" style="text-transform: capitalize;"></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">City</td>
+    <td><input [(ngModel)]="vend.city" style="text-transform: capitalize;"></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">State</td>
+        <td><input class="state"[(ngModel)]="vend.state" ></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Zip</td>
+        <td><input class="zip" [(ngModel)]="vend.zip" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone"[(ngModel)]="vend.phone" ></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">Email</td>
+    <td><input class="email" [(ngModel)]="vend.email"></td>
+</tr>
+    
+</tbody>
+
+
+</table>
+
+<button class="btn btn-secondary" style="margin-left:5%;" (click)="save()">Save Changes</button>
+</div>
+
