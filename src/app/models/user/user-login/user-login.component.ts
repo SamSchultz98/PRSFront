@@ -22,10 +22,10 @@ export class UserLoginComponent implements OnInit {
 
 
 
-  loging(): void{
+  login(): void{
     this.usersvc.login(this.email, this.password).subscribe({
       next:(res) => {
-        console.debug("Employee:", res)
+        console.debug("User:", res)
         this.router.navigateByUrl("/Users")
         this.syssvc.user = res;
       },

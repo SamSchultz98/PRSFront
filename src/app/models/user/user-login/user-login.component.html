@@ -8,11 +8,11 @@
         </th>
         <tr>
             
-            <input class="input" style="border: 20px; font-size: large;"[(ngModel)]="email" placeholder="Email">
+            <input class="input" style="border: 20px; font-size: large;"[(ngModel)]="email" placeholder="Username">
             <input class="input"[(ngModel)]="password" placeholder="Password">
             
         </tr>
-        <button class="btn btn-success" style="margin-left: 6.5%; margin-top: 1%; width: 220px;">Login</button>
+        <button class="btn btn-success" style="margin-left: 6.5%; margin-top: 1%; width: 220px;" (click)="login()">Login</button>
     </table>
     
     <div class="loginBottom">
