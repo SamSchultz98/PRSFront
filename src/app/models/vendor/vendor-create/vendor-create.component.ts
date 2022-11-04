@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
 import { Vendor } from '../vendor.class';
 import { VendorService } from '../vendor.service';
 
@@ -29,10 +30,12 @@ vend: Vendor = new Vendor();
 
   constructor(
     private vendsvc: VendorService,
+    private syssvc: SystemService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.syssvc.verifyUser();
   }
 
 }
