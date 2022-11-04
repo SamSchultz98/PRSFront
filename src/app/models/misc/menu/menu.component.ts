@@ -11,7 +11,7 @@ import { Menu } from './menu.class';
 export class MenuComponent implements OnInit {
 
   user:User = this.syssvc.user;
-  usernameDisplay:String= this.user.username;
+  usernameDisplay:String= "";
   
   menus: Menu[] = [
     new Menu("Home","/home"),
@@ -28,6 +28,11 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.syssvc.verifyUser();
+    if(this.syssvc.user == null){
+      this.usernameDisplay="No User"
+    }
+    this.usernameDisplay=this.syssvc.user.username
   }
 
 }

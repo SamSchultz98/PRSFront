@@ -6,7 +6,6 @@ import { Route, Router } from '@angular/router';
 })
 export class SystemService {
 
-
   user:any=null;
 
   

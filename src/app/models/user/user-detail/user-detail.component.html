@@ -1,1 +1,58 @@
-<p>user-detail works!</p>
+<app-header [pageTitle]="titlePage"></app-header>
+<div>
+
+    <table id="componenet" *ngIf="user" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id" [(ngModel)]="user.id" type="number"  disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Username</td>
+    <td><input [(ngModel)]="user.username"disabled></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Firstname</td>
+    <td><input [(ngModel)]="user.firstname" disabled></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Lastname</td>
+    <td><input [(ngModel)]="user.lastname" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone"[(ngModel)]="user.phone" disabled></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Email</td>
+        <td><input class="email" [(ngModel)]="user.email" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">IsReviewer</td>
+        <td><input [(ngModel)]="user.isreviewer" type="checkbox" disabled></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">Email</td>
+    <td><input [(ngModel)]="user.isadmin" type="checkbox" disabled></td>
+</tr>
+    
+</tbody>
+
+
+</table>
+<button class="btn btn-secondary" (click)="warning()" ngClass="btn-clicked" style="margin-left: 7.3%;">Delete</button>
+<span *ngIf="showVerifyButton">
+    &nbsp;
+    <span class="prop" style="margin-top: 0px;">Please click confirm to Delete &nbsp;</span>
+    <button (click)="deleteConfirm()" class="btn btn-danger">Confirm</button>
+    <p class="danger">This action can not be reversed</p>
+</span>
+</div>

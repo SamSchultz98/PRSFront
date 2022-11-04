@@ -33,6 +33,7 @@ import { MenuComponent } from './models/misc/menu/menu.component';
 import { RequestReviewComponent } from './models/request/request-review/request-review.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { BoolDisplayPipe } from './common/bool-display.pipe';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { FooterComponent } from './common/footer/footer.component';
     MenuComponent,
     RequestReviewComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BoolDisplayPipe
   ],
   imports: [
     BrowserModule,
