@@ -29,7 +29,7 @@ import { RequestReviewComponent } from './models/request/request-review/request-
 import { MenuComponent } from './models/misc/menu/menu.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"/home",pathMatch:"full"},
+  {path:"",redirectTo:"/login",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"about",component:AboutComponent},
   {path:"Products",component:ProductListComponent},
