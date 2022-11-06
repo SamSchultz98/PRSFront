@@ -15,6 +15,11 @@ pageTitle:string="Create Vendor"
 vend: Vendor = new Vendor();
 
 
+constructor(
+  private vendsvc: VendorService,
+  private syssvc: SystemService,
+  private router: Router
+) { }
 
   save():void{
     this.vendsvc.create(this.vend).subscribe({
@@ -28,11 +33,6 @@ vend: Vendor = new Vendor();
     })
   }
 
-  constructor(
-    private vendsvc: VendorService,
-    private syssvc: SystemService,
-    private router: Router
-  ) { }
 
   ngOnInit(): void {
     this.syssvc.verifyUser();

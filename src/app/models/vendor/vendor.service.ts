@@ -13,7 +13,6 @@ export class VendorService {
   vends: Vendor[]=[];
   constructor(
     private http:HttpClient,
-    private route:Router
   ) { }
 
 
