@@ -1,21 +1,18 @@
 <main>
-    <div>
-        Title of Page
-    </div>
     <table class="table table-striped">
         <th>
             <span class="title" id="page-title">Login</span>
         </th>
         <tr>
+
             
             <input class="input" style="border: 20px; font-size: large;"[(ngModel)]="email" placeholder="Username">
-            <input class="input"[(ngModel)]="password" placeholder="Password">
+            <input class="input"[(ngModel)]="password" placeholder="Password" type="password">
             
+        
         </tr>
-        <button class="btn btn-success" style="margin-left: 6.5%; margin-top: 1%; width: 220px;" (click)="login()">Login</button>
+        <button class="btn btn-success" style="margin-left: 7.5%; margin-top: 1%; width: 220px;" (click)="login()">Login</button>
     </table>
     
-    <div class="loginBottom">
-    Product Request System (PRS) Created by Samuel Schultz
-    </div>
+   <app-footer></app-footer>
 </main>

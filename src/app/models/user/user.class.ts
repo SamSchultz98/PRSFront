@@ -1,10 +1,10 @@
 export class User{
     id:number=0;
-    username:String="";
+    username:string="";
     firstname:string="";
     lastname:string="";
     phone:string="";
     email:string="";
-    isreviewer:boolean=false;
-    isadmin:boolean=false;
+    isReviewer:boolean=false;
+    isAdmin:boolean=false;
 }
