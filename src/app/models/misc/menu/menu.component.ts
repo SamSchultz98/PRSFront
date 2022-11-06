@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
   usernameDisplay:String= "";
   
   menus: Menu[] = [
-    new Menu("Home","/home"),
     new Menu("Products","/Products"),
     new Menu("Vendors","/Vendors"),
     new Menu("Users","/Users"),

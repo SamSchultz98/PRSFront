@@ -21,7 +21,7 @@ export class UserCreateComponent implements OnInit {
   ) { }
   
   
-    save():void{
+    save(): void{
       this.usersvc.create(this.user).subscribe({
         next: (res) => {
           console.log(res);
