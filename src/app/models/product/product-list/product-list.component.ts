@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.prodsvc.list().subscribe({
       next: (res) => {
-        console.log("Employee:",res)
+        console.log("Products:",res)
         this.prods = res
       },
       error: (err) =>{

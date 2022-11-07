@@ -23,7 +23,7 @@ export class VendorListComponent implements OnInit {
     this.syssvc.verifyUser();
     this.vendsvc.list().subscribe({
       next: (res) => {
-        console.log("Employee:",res)
+        console.log("Vendors:",res)
         this.vends = res
       },
       error: (err) =>{
