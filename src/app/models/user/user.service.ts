@@ -28,7 +28,7 @@ export class UserService {
     return this.http.post(`${this.baseurl}`, user) as Observable<User>
   }
   change(user:User): Observable<User>{
-    return this.http.post(`${this.baseurl}/${user.id}`, user) as Observable<User>
+    return this.http.put(`${this.baseurl}/${user.id}`, user) as Observable<User>
   }
   remove(id:number): Observable<any>{
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>

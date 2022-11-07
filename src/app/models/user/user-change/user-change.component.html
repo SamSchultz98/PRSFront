@@ -1,1 +1,54 @@
-<p>user-change works!</p>
+<div>
+    <app-header [pageTitle]="titlePage"></app-header>
+    <table id="componenet" *ngIf="user" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id" [(ngModel)]="user.id" type="number"  disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">Username</td>
+                <td><input [(ngModel)]="user.username"></td>
+             </tr>
+            <tr>
+                <td class="prop">Password</td>
+                <td><input [(ngModel)]="user.password"></td>
+             </tr>
+   
+    <tr>
+    <td class="prop">Firstname</td>
+    <td><input [(ngModel)]="user.firstname" ></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Lastname</td>
+    <td><input [(ngModel)]="user.lastname" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Phone</td>
+        <td><input class="phone"[(ngModel)]="user.phone" ></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Email</td>
+        <td><input class="email" [(ngModel)]="user.email" ></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">IsReviewer</td>
+        <td><input [(ngModel)]="user.isReviewer" type="checkbox"></td>
+    </tr>
+    
+    <tr>
+    <td class="prop">IsAdmin</td>
+    <td><input [(ngModel)]="user.isAdmin" type="checkbox"></td>
+</tr>
+<button class="btn btn-success"(click)="save()" style="margin-left:5%;">Save</button>
+    
+</tbody>
+    </table>
+<app-footer></app-footer>
+</div>
