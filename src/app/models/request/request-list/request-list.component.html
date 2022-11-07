@@ -1,2 +1,32 @@
-<app-menu></app-menu>
-<p>request-list works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Justification</th>
+        <th>Rejection Reason</th>
+        <th>Delivery Mode</th>
+        <th>Status</th>
+        <th>Total</th>
+        <th>User</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody *ngFor="let r of reqs">
+<tr>
+    <th>{{r.id}}</th>
+    <th>{{r.description}}</th>
+    <th>{{r.justification}}</th>
+    <th>{{r.rejectionReason}}</th>
+    <th>{{r.delieveryMode}}</th>
+    <th>{{r.status}}</th>
+    <th>{{r.total}}</th>
+    <th>{{r.user.username}}</th>
+    <td><a routerLink="/Requests/detail/{{r.id}}">Detail</a> | <a routerLink="/Requests/change/{{r.id}}">Edit</a> | <a routerLink="/Requestlines">Lines</a></td>
+</tr>
+
+</tbody>
+</table>
+<app-footer></app-footer>
