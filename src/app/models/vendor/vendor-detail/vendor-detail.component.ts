@@ -43,7 +43,7 @@ export class VendorDetailComponent implements OnInit {
     let id = +this.route.snapshot.params["id"];
     this.vendsvc.get(id).subscribe({
       next:(res)=>{
-        console.log("User:",res)
+        console.log("Vendor:",res)
         this.vend = res
       },
       error: (err) => {

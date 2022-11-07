@@ -23,7 +23,7 @@ users:User[]=[];
     this.syssvc.verifyUser();
     this.usersvc.list().subscribe({
       next: (res) => {
-        console.log("Employee:",res)
+        console.log("Users:",res)
         this.users = res
       },
       error: (err) =>{

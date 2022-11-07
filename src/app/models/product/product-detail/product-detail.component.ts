@@ -30,8 +30,8 @@ export class ProductDetailComponent implements OnInit {
   deleteConfirm():void{
     this.prodsvc.remove(this.prod.id).subscribe({
       next:(res)=>{
-        console.debug("User Deleted")
-        this.router.navigateByUrl("/Users")
+        console.debug("Product Deleted")
+        this.router.navigateByUrl("/Products")
       },
       error:(err) =>{
         console.error(err)
