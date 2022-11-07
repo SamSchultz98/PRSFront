@@ -1,1 +1,54 @@
-<p>product-detail works!</p>
+<app-header [pageTitle]="titlePage"></app-header>
+<div>
+
+    <table id="componenet" *ngIf="prod" class="table table-striped">
+        
+        <tbody>
+            <tr>
+                <td class="prop">ID</td>
+                <td><input class="id" [(ngModel)]="prod.id" type="number"  disabled></td>
+                
+            </tr>
+            <tr>
+                <td class="prop">PartNbr</td>
+    <td><input [(ngModel)]="prod.partNbr"disabled></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Name</td>
+    <td><input [(ngModel)]="prod.name" disabled></td>
+   </tr>
+   
+    <tr>
+    <td class="prop">Price</td>
+    <td><input [(ngModel)]="prod.price" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Unit</td>
+        <td><input class="phone"[(ngModel)]="prod.unit" disabled></td>
+    </tr>
+    
+    <tr>
+        <td class="prop">Photopath</td>
+        <td><input class="email" [(ngModel)]="prod.photopath" disabled></td>
+   </tr>
+    
+    <tr>
+        <td class="prop">Vendor</td>
+        <td><input [(ngModel)]="prod.vendor.name" disabled></td>
+    </tr>
+    
+    
+</tbody>
+
+
+</table>
+<button class="btn btn-secondary" (click)="warning()" ngClass="btn-clicked" style="margin-left: 7.3%;">Delete</button>
+<span *ngIf="showVerifyButton">
+    &nbsp;
+    <span class="prop" style="margin-top: 0px;">Please click confirm to Delete &nbsp;</span>
+    <button (click)="deleteConfirm()" class="btn btn-danger">Confirm</button>
+    <p class="danger">This action can not be reversed</p>
+</span>
+</div>

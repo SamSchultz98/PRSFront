@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
+import { Product } from '../product.class';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +11,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
+  showVerifyButton:boolean = false;
+  titlePage="Product Detail"
+  prod!:Product;
 
-  ngOnInit(): void {
+  constructor(
+    private prodsvc: ProductService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private syssvc: SystemService
+  ) { }
+
+  warning():void{
+    this.showVerifyButton = !this.showVerifyButton
   }
 
+
+  deleteConfirm():void{
+    this.prodsvc.remove(this.prod.id).subscribe({
+      next:(res)=>{
+        console.debug("User Deleted")
+        this.router.navigateByUrl("/Users")
+      },
+      error:(err) =>{
+        console.error(err)
+      }
+    })
+  }
+
+  ngOnInit(): void {
+    let id = +this.route.snapshot.params["id"];
+    this.prodsvc.get(id).subscribe({
+      next:(res)=>{
+        console.log("Product:",res)
+        this.prod = res
+      },
+      error: (err) => {
+        console.error(err)
+      }
+    })
+  }
 }
+
+
