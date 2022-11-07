@@ -5,7 +5,7 @@ export class Request{
     description:string="";
     justification:string="";
     rejectionReason:string="";
-    delieveryMode:string="Pickup";
+    deliveryMode:string="Pickup";
     status:string="NEW";
     total:number=0;
     userid:string="";
