@@ -9,7 +9,7 @@
         <th>Username</th>
         <th>Actions</th>
     </thead>
-    <tbody>
+    <tbody *ngIf="req">
         <tr>
             <td>{{req.id}}</td>
             <td>{{req.description}}</td>
@@ -17,7 +17,7 @@
             <td>{{req.status}}</td>
             <td>{{req.total}}</td>
             <td>{{req.user.username}}</td>
-            <td><a (click)="review()">Submit For Review</a></td>
+            <td><a routerLink="/Requests/lines/{{req.id}}" (click)="review()">Submit For Review</a></td>
         </tr>
     </tbody>
 </table>
