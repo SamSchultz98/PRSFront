@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from '../../request/request.service';
+import { RequestlineService } from '../requestline.service';
+import { Request } from '../../request/request.class';
+import { Requestline } from '../requestline.class';
 
 @Component({
   selector: 'app-requestline-list',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestlineListComponent implements OnInit {
 
-  constructor() { }
+  pageTitle:string="Request Lines"
+  reqlines: Requestline[] = [];
+  req!: Request;
+  constructor(
+    private reqlsvc:RequestlineService,
+    private reqsvc:RequestService,
+  ) { }
 
   ngOnInit(): void {
+    this.reqlsvc.list().subscribe({
+      next: (res) => {
+        console.log("Requestlines:",res)
+        this.reqlines = res;
+      },
+      error: (err) => {
+        console.error(err)
+      }
+    })
   }
 
 }
