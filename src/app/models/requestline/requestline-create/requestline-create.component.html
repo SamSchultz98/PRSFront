@@ -1,1 +1,27 @@
-<p>requestline-create works!</p>
+<app-header></app-header>
+<main>
+<table>
+
+    <tr>
+        <td>Id</td>
+        <td><input [(ngModel)]="reql.id" disabled></td>
+    </tr>
+    <tr>
+        <td>Product</td>
+        <select [(ngModel)]="reql.productId">
+            <label></label>
+            <option *ngFor="let p of prods" value="{{p.id}}">{{p.name}}</option>
+            
+        </select>
+    </tr>
+    <tr>
+        <td>Quantity</td>
+        <td><input [(ngModel)]="reql.quantity" type="number"></td>
+    </tr>
+    
+</table>
+
+<button (click)="save()">Save</button>
+
+
+</main>
