@@ -11,7 +11,7 @@ import { Request } from '../request.class';
 export class RequestChangeComponent implements OnInit {
 
   showVerifyButton:boolean = false;
-  titlePage="Request Detail";
+  titlePage="Request Edit";
   req!: Request;
 
   constructor(
