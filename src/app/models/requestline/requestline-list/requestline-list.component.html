@@ -21,7 +21,7 @@
         </tr>
     </tbody>
 </table>
-
+<button class="btn btn-secondary create" routerLink="/Requests/lines/create">Create</button>
 <table id="Request Lines" class="table table-striped">
 
 <thead>
@@ -40,7 +40,7 @@
         <td>{{rl.product.price}}</td>
         <td>{{rl.quantity}}</td>
         <td>{{rl.product.price * rl.quantity}}</td>
-        <td><a>Edit</a> | <a>Delete</a></td>
+        <td><a>Edit</a> | <a routerLink="/Requests/lines/{{req.id}}" (click)="delete(rl.id)">Delete</a></td>
     </tr>
 </tbody>
 

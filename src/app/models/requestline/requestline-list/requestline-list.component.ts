@@ -16,6 +16,7 @@ export class RequestlineListComponent implements OnInit {
   pageTitle:string="Request Lines"
   reqlines: Requestline[] = [];
   req!: Request;
+  reql!:Requestline;
   
   constructor(
     private reqlsvc:RequestlineService,
@@ -32,6 +33,18 @@ review():void{
     },
     error:(err)=>{
       console.error(err);
+    }
+  })
+}
+
+delete(id:number):void{
+  this.reqlsvc.remove(id).subscribe({
+    next:(res)=>{
+      console.log(res)
+      this.refresh()
+    },
+    error:(err)=>{
+      console.error(err)
     }
   })
 }
