@@ -3,6 +3,7 @@ import { RequestService } from '../../request/request.service';
 import { RequestlineService } from '../requestline.service';
 import { Request } from '../../request/request.class';
 import { Requestline } from '../requestline.class';
+import { ProductService } from '../../product/product.service';
 
 @Component({
   selector: 'app-requestline-list',
@@ -17,6 +18,7 @@ export class RequestlineListComponent implements OnInit {
   constructor(
     private reqlsvc:RequestlineService,
     private reqsvc:RequestService,
+    private prodsvc:ProductService,
   ) { }
 
   ngOnInit(): void {
