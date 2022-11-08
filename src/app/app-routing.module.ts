@@ -58,9 +58,9 @@ const routes: Routes = [
   {path:"review",component:RequestReviewComponent},
 
 
-  {path:"Requestlines",component:RequestlineListComponent},
+  {path:"Requests/lines/:id",component:RequestlineListComponent},
   {path:"Requestlines/change/:id",component:RequestlineChangeComponent},
-  {path:"Requestlines/create",component:RequestlineCreateComponent},
+  {path:"Requestlines/create/:id",component:RequestlineCreateComponent},
   {path:"Requestlines/detail/:id",component:RequestlineDetailComponent},
   
 

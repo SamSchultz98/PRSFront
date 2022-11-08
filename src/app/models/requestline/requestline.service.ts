@@ -2,13 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Requestline } from './requestline.class';
+import { Request } from '../request/request.class';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestlineService {
   baseurl:string="http://localhost:5050/api/Requestlines"
+  reviewurl:string="http://localhost:5050/api/Requests/review"
   reqlines:Requestline[]=[];
+  req!:Request;
 
   constructor(
     private http: HttpClient
@@ -30,5 +33,8 @@ export class RequestlineService {
   }
   remove(id:number): Observable<any>{
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>
+  }
+  review(req: Request): Observable<any>{
+    return this.http.put(`${this.reviewurl}/${req.id}`, req) as Observable<any>
   }
 }

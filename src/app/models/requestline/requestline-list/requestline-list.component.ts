@@ -4,6 +4,7 @@ import { RequestlineService } from '../requestline.service';
 import { Request } from '../../request/request.class';
 import { Requestline } from '../requestline.class';
 import { ProductService } from '../../product/product.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-requestline-list',
@@ -15,13 +16,33 @@ export class RequestlineListComponent implements OnInit {
   pageTitle:string="Request Lines"
   reqlines: Requestline[] = [];
   req!: Request;
+  
   constructor(
     private reqlsvc:RequestlineService,
     private reqsvc:RequestService,
     private prodsvc:ProductService,
+    private route: ActivatedRoute,
   ) { }
 
+review():void{
+  this.reqlsvc.review(this.req).subscribe({
+    next:(res)=>{
+      console.log(res)
+    },
+    error:(err)=>{
+      console.error(err);
+    }
+  })
+}
+
   ngOnInit(): void {
+    let reqid = +this.route.snapshot.params["id"];
+    this.reqsvc.get(reqid).subscribe({
+      next:(res)=>{
+        console.log(res)
+        this.req = res
+      }
+    })
     this.reqlsvc.list().subscribe({
       next: (res) => {
         console.log("Requestlines:",res)
@@ -32,5 +53,6 @@ export class RequestlineListComponent implements OnInit {
       }
     })
   }
+    
 
 }
