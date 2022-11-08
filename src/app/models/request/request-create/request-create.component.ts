@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
+import { SystemService } from 'src/app/common/system.service';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-request-create',
@@ -10,13 +12,16 @@ import { Request } from '../request.class';
 })
 export class RequestCreateComponent implements OnInit {
   showVerifyButton:boolean = false;
-  titlePage="Request Edit";
+  titlePage="Create Request";
   req: Request = new Request;
+  sysuser: User = this.syssvc.user
+  
 
   constructor(
     private reqsvc: RequestService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private syssvc: SystemService
   ) { }
 
   save():void{
