@@ -1,3 +1,4 @@
+import { Requestline } from "../requestline/requestline.class";
 import { User } from "../user/user.class";
 
 export class Request{

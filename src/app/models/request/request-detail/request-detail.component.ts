@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SystemService } from 'src/app/common/system.service';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class';
-import { User } from '../../user/user.class';
-import { UserService } from '../../user/user.service';
+
 
 @Component({
   selector: 'app-request-detail',
@@ -14,15 +12,14 @@ import { UserService } from '../../user/user.service';
 export class RequestDetailComponent implements OnInit {
 
   showVerifyButton:boolean = false;
-  titlePage="Request Detail"
+  titlePage="Request Detail";
   req!: Request;
   
 
   constructor(
     private reqsvc: RequestService,
     private route: ActivatedRoute,
-    private router: Router,
-    private syssvc: SystemService
+    private router: Router
   ) { }
 
   warning():void{

@@ -1,8 +1,9 @@
 
 <app-header [pageTitle]="titlePage"></app-header>
+    <main>
 
-    <table id="componenet" *ngIf="req" class="table table-striped">
-        
+        <table *ngIf="req" class="table table-striped">
+            
         <tbody>
             <tr>
                 <td class="prop">Id</td>
@@ -11,19 +12,19 @@
             </tr>
             <tr>
                 <td class="prop">Description</td>
-    <td><input [(ngModel)]="req.description"disabled></td>
+    <td><input [(ngModel)]="req.description" disabled></td>
    </tr>
    
     <tr>
     <td class="prop">Justification</td>
     <td><input [(ngModel)]="req.justification" disabled></td>
-   </tr>
+</tr>
    
-    <tr>
+<tr>
     <td class="prop">Rejection Reason</td>
     <td><input [(ngModel)]="req.rejectionReason" disabled></td>
-   </tr>
-    
+</tr>
+
     <tr>
         <td class="prop">Delivery Mode</td>
         <td><input [(ngModel)]="req.deliveryMode" disabled></td>
@@ -40,7 +41,7 @@
     </tr>
     <tr>
         <td class="prop">User</td>
-        <td><input [(ngModel)]="req.userid" disabled></td>
+        <td><input [(ngModel)]="req.user.username" disabled></td>
     </tr>
     
     
@@ -56,3 +57,4 @@
     <p class="danger">This action can not be reversed</p>
 </span>
 
+</main>

@@ -16,14 +16,14 @@
 </thead>
 <tbody *ngFor="let r of reqs">
 <tr>
-    <th>{{r.id}}</th>
-    <th>{{r.description}}</th>
-    <th>{{r.justification}}</th>
-    <th>{{r.rejectionReason}}</th>
-    <th>{{r.deliveryMode}}</th>
-    <th>{{r.status}}</th>
-    <th>{{r.total}}</th>
-    <th>{{r.user.username}}</th>
+    <td>{{r.id}}</td>
+    <td>{{r.description}}</td>
+    <td>{{r.justification}}</td>
+    <td>{{r.rejectionReason}}</td>
+    <td>{{r.deliveryMode}}</td>
+    <td>{{r.status}}</td>
+    <td>{{r.total}}</td>
+    <td>{{r.user.username}}</td>
     <td><a routerLink="/Requests/detail/{{r.id}}">Detail</a> | <a routerLink="/Requests/change/{{r.id}}">Edit</a> | <a routerLink="/Requestlines">Lines</a></td>
 </tr>
 
