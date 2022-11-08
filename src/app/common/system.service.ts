@@ -11,7 +11,7 @@ export class SystemService {
   
     verifyUser():void{
       if(this.user == null){
-      this.route.navigateByUrl("/login")
+      // this.route.navigateByUrl("/login")     Uncomment when complete
       }
 }
 

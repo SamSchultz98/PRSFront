@@ -19,6 +19,11 @@
 <td><input [(ngModel)]="req.justification" ></td>
 </tr>
 
+<tr>
+<td class="prop">Rejection Reason</td>
+<td><input [(ngModel)]="req.rejectionReason" disabled ></td>
+</tr>
+
 
 <tr>
     <td class="prop">Delivery Mode</td>
@@ -32,12 +37,13 @@
 
 <tr>
     <td class="prop">Total</td>
-    <td><input [(ngModel)]="req.total" ></td>
+    <td><input [(ngModel)]="req.total" type="number" ></td>
 </tr>
 <tr>
-    <td class="prop">User</td>
-    <td><input [(ngModel)]="req.user" [value]="sysuser"></td>
+    <td class="prop">UserId</td>
+    <td><input [value]="currentUsername" value="currentUsername" disabled></td>
 </tr>
+
 
 
 </tbody>

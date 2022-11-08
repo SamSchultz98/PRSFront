@@ -15,6 +15,7 @@ export class RequestCreateComponent implements OnInit {
   titlePage="Create Request";
   req: Request = new Request;
   sysuser: User = this.syssvc.user
+  currentUsername: String = this.sysuser.username
   
 
   constructor(
@@ -25,7 +26,7 @@ export class RequestCreateComponent implements OnInit {
   ) { }
 
   save():void{
-    this.reqsvc.change(this.req).subscribe({
+    this.reqsvc.create(this.req).subscribe({
       next:(res) => {
         console.debug("Request Changed")
         this.router.navigateByUrl("/Requests")
@@ -36,6 +37,7 @@ export class RequestCreateComponent implements OnInit {
     })
   }
   ngOnInit(): void {
+    this.req.userid = this.syssvc.user.id
   }
 
 }
