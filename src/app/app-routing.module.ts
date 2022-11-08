@@ -59,7 +59,7 @@ const routes: Routes = [
 
 
   {path:"Requests/lines/:id",component:RequestlineListComponent},
-  {path:"Requestlines/change/:id",component:RequestlineChangeComponent},
+  {path:"Requests/lines/change/:id",component:RequestlineChangeComponent},
   {path:"Requests/lines/create/:id",component:RequestlineCreateComponent},
   {path:"Requestlines/detail/:id",component:RequestlineDetailComponent},
   
