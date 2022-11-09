@@ -15,7 +15,7 @@ export class RequestlineChangeComponent implements OnInit {
   Pagetitle:string="Create Request Line"
   reql!:Requestline;
   prods:Product[] = [];
-  reqid:Number=this.reql.requestId
+  // reqid:Number=this.reql.requestId
   constructor(
     private reqlsvc: RequestlineService,
     private prodsvc: ProductService,
@@ -24,7 +24,7 @@ export class RequestlineChangeComponent implements OnInit {
   ) { }
 
   save(): void {
-    this.reqlsvc.create(this.reql).subscribe({
+    this.reqlsvc.change(this.reql).subscribe({
       next:(res)=>{
         console.log(res)
         this.router.navigateByUrl(`/Requests/lines/${this.reql.requestId}`)
@@ -34,15 +34,6 @@ export class RequestlineChangeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.prodsvc.list().subscribe({
-      next:(res)=>{
-        console.log(res)
-        this.prods=res
-      },
-      error:(err)=>{
-        console.debug(err)
-      }
-    })
     let id = +this.route.snapshot.params["id"];
     this.reqlsvc.get(id).subscribe({
       next:(res)=>{
@@ -53,6 +44,15 @@ export class RequestlineChangeComponent implements OnInit {
         console.debug(err)
       }
     })
+    this.prodsvc.list().subscribe({
+      next:(res)=>{
+        console.log(res)
+        this.prods=res
+      },
+      error:(err)=>{
+        console.debug(err)
+      }
+    })
+    
   }
-
 }
