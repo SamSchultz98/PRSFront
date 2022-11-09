@@ -43,5 +43,5 @@
 </tbody>
 
 </table>
-<button class="btn btn-success" (click)="accept()">Accept</button> | <button class="btn btn-danger">Reject</button>
+<button class="btn btn-success" (click)="accept()">Approve</button> | <button class="btn btn-danger" (click)="rejectButton()">Deny</button> <span *ngIf="showRejectReason == true"> | <input *ngIf="showRejectReason == true" [(ngModel)]="req.rejectionReason" placeholder="Rejection Reason (required)" style="width: 280px;"> | <button *ngIf="showRejectReason == true" (click)="verifyDeny()">| Verify Deny</button></span>
 <app-footer></app-footer>

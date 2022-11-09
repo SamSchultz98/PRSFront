@@ -17,6 +17,7 @@ export class ReviewItemComponent implements OnInit {
   reqlines: Requestline[] = [];
   req!: Request;
   reql!:Requestline;
+  showRejectReason: boolean =false;
 
   constructor(
     private reqlsvc:RequestlineService,
@@ -25,6 +26,23 @@ export class ReviewItemComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
+  rejectButton():void{
+    this.showRejectReason = true
+  }
+
+  verifyDeny():void{
+    this.req.status = "DENIED"
+    this.reqsvc.change(this.req).subscribe({
+      next:(res)=>{
+        console.log(res)
+        this.refresh()
+      },
+      error:(err)=>{
+        console.error(err)
+      }
+    })
+  }
+  
     accept():void{
       this.req.status = "APPROVED"
       this.reqsvc.change(this.req).subscribe({
