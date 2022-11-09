@@ -34,6 +34,8 @@ import { RequestReviewComponent } from './models/request/request-review/request-
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { BoolDisplayPipe } from './common/bool-display.pipe';
+import { ReviewListComponent } from './models/requestline/review-list/review-list.component';
+import { ReviewItemComponent } from './models/requestline/review-item/review-item.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { BoolDisplayPipe } from './common/bool-display.pipe';
     RequestReviewComponent,
     HeaderComponent,
     FooterComponent,
-    BoolDisplayPipe
+    BoolDisplayPipe,
+    ReviewListComponent,
+    ReviewItemComponent
   ],
   imports: [
     BrowserModule,

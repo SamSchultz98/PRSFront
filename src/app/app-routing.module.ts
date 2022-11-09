@@ -27,6 +27,8 @@ import { AboutComponent } from './models/misc/about/about.component';
 import { E404Component } from './models/misc/e404/e404.component';
 import { RequestReviewComponent } from './models/request/request-review/request-review.component';
 import { MenuComponent } from './models/misc/menu/menu.component';
+import { ReviewListComponent } from './models/requestline/review-list/review-list.component';
+import { ReviewItemComponent } from './models/requestline/review-item/review-item.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/login",pathMatch:"full"},
@@ -63,6 +65,8 @@ const routes: Routes = [
   {path:"Requests/lines/create/:id",component:RequestlineCreateComponent},
   {path:"Requestlines/detail/:id",component:RequestlineDetailComponent},
   
+  {path:"Requests/review", component: ReviewListComponent},
+  {path:"Requests/review/:id", component: ReviewItemComponent},
 
 
   {path:"**", component:E404Component}
