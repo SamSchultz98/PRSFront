@@ -1,5 +1,5 @@
 <app-header [pageTitle]="pageTitle"></app-header>
-<table id="Request" class="table table-striped" >
+<table id="Request" class="table table-striped" *ngIf="reqs" >
     <thead>
         <th>Id</th>
         <th>Description</th>

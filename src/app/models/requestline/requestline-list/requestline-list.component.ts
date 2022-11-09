@@ -26,6 +26,19 @@ export class RequestlineListComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
+  clearReject():void{
+    this.req.rejectionReason = "";
+    this.reqsvc.change(this.req).subscribe({
+      next:(res)=>{
+      console.log(res)
+      this.review()
+      },
+      error:(err)=>{
+        console.error(err)
+      }
+    })
+  }
+ 
 review():void{
   this.reqlsvc.review(this.req).subscribe({
     next:(res)=>{
@@ -51,8 +64,7 @@ delete(id:number):void{
 }
 
 refresh():void{
-let reqid = +this.route.snapshot.params["id"];
-  this.reqsvc.get(reqid).subscribe({
+  this.reqsvc.get(this.req.id).subscribe({
     next:(res)=>{
       console.log(res)
       this.req = res

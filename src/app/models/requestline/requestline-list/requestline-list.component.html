@@ -17,11 +17,11 @@
             <td>{{req.status}}</td>
             <td>{{req.total}}</td>
             <td>{{req.user.username}}</td>
-            <td><a routerLink="/Requests/lines/{{req.id}}" (click)="review()">Submit For Review</a></td>
+            <td><a routerLink="/Requests/lines/{{req.id}}" (click)="clearReject()">Submit For Review</a></td>
         </tr>
     </tbody>
 </table>
-<button class="btn btn-secondary" routerLink="/Requests/lines/create/{{req.id}}">Create</button>
+<button *ngIf="req" class="btn btn-secondary" routerLink="/Requests/lines/create/{{req.id}}">Create</button>
 <table id="Request Lines" class="table table-striped">
 
 <thead>
@@ -45,4 +45,5 @@
 </tbody>
 
 </table>
+
 <app-footer></app-footer>
