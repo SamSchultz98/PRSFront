@@ -13,7 +13,7 @@ import { Request } from '../../request/request.class';
 })
 export class ReviewItemComponent implements OnInit {
 
-  pageTitle:string="Request Lines"
+  pageTitle:string="Review Item"
   reqlines: Requestline[] = [];
   req!: Request;
   reql!:Requestline;
@@ -42,7 +42,7 @@ export class ReviewItemComponent implements OnInit {
       }
     })
   }
-  
+
     accept():void{
       this.req.status = "APPROVED"
       this.reqsvc.change(this.req).subscribe({

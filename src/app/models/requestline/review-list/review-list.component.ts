@@ -13,7 +13,7 @@ import { Request } from '../../request/request.class';
 })
 export class ReviewListComponent implements OnInit {
 
-  pageTitle:string="Request Lines"
+  pageTitle:string="Reviews List"
   reqlines: Requestline[] = [];
   reqs: Request[] = [];
   reql!:Requestline;

@@ -9,7 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductListComponent implements OnInit {
 
-  pageTitle="Products"
+  pageTitle="Product List"
   prods:Product[] = [];
 
   constructor(
