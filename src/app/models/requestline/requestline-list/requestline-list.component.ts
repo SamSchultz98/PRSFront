@@ -18,6 +18,7 @@ export class RequestlineListComponent implements OnInit {
   req!: Request;
   reql!:Requestline;
   
+  
   constructor(
     private reqlsvc:RequestlineService,
     private reqsvc:RequestService,

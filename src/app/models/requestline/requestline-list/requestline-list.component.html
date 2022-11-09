@@ -34,7 +34,7 @@
 
 </thead>
 <tbody *ngFor="let rl of reqlines">
-    <tr>
+    <tr *ngIf="rl.requestId == req.id">
         <td>{{rl.id}}</td>
         <td>{{rl.product.name}}</td>
         <td>{{rl.product.price}}</td>
