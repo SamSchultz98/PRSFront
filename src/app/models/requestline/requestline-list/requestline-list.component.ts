@@ -76,6 +76,9 @@ let reqid = +this.route.snapshot.params["id"];
       next:(res)=>{
         console.log(res)
         this.req = res
+      },
+      error:(err)=>{
+        console.error(err)
       }
     })
     this.reqlsvc.list().subscribe({

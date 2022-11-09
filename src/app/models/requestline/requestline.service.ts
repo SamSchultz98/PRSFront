@@ -37,7 +37,4 @@ export class RequestlineService {
   review(req: Request): Observable<any>{
     return this.http.put(`${this.reviewurl}/${req.id}`, req) as Observable<any>
   }
-  getrq(id:number): Observable<Requestline[]>{
-    return this.http.get(`${this.baseurl}/${id}`) as Observable<Requestline[]>
-  }
 }
