@@ -10,9 +10,10 @@ import { Menu } from './menu.class';
 })
 export class MenuComponent implements OnInit {
 
+  
   user:User = this.syssvc.user;
   actusername=this.user.username;
-  // usernameDisplay:String= this.actusername; uncomment when complete
+  usernameDisplay:String= this.actusername;
   
   menus: Menu[] = [
     new Menu("Products","/Products"),
