@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   
   user:User = this.syssvc.user;
   actusername=this.user.username;
-  usernameDisplay:String= this.actusername;
+  //usernameDisplay:String= this.actusername;    Commented Out When ReDesinging website
   
   menus: Menu[] = [
     new Menu("Products","/Products"),
